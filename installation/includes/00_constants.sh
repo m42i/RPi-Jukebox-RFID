@@ -1,5 +1,5 @@
-RPI_BOOT_CONFIG_FILE="/boot/config.txt"
-RPI_BOOT_CMDLINE_FILE="/boot/cmdline.txt"
+RPI_BOOT_CONFIG_FILE="/boot/firmware/config.txt"
+RPI_BOOT_CMDLINE_FILE="/boot/firmware/cmdline.txt"
 SHARED_PATH="${INSTALLATION_PATH}/shared"
 SETTINGS_PATH="${SHARED_PATH}/settings"
 SYSTEMD_USR_PATH="/usr/lib/systemd/user"
