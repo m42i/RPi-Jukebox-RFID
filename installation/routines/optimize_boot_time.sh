@@ -174,7 +174,7 @@ _optimize_check() {
         if [[ $(is_NetworkManager_enabled) == true ]]; then
             local active_profile=$(get_nm_active_profile)
             local active_profile_path="/etc/NetworkManager/system-connections/${active_profile}.nmconnection"
-            verify_files_exists "${active_profile_path}"
+            verify_file_exists "${active_profile_path}"
             verify_file_contains_string "${CURRENT_IP_ADDRESS}" "${active_profile_path}"
             verify_file_contains_string "${CURRENT_GATEWAY}" "${active_profile_path}"
         fi

@@ -206,6 +206,20 @@ print_verify_installation() {
 "
 }
 
+# Check if the file exists
+verify_file_exists() {
+    local file_name="$@"
+    log "  Verify '${file_name}' exists"
+
+    if [[ -z "${file_name}" ]]; then
+        exit_on_error "ERROR: at least one parameter value is missing!"
+    fi
+
+    test ! -f "${file_name}" && exit_on_error "ERROR: '${file_name}' does not exists or is not a file!"
+
+    log "  CHECK"
+}
+
 # Check if the file(s) exists
 verify_files_exists() {
     local files="$@"
